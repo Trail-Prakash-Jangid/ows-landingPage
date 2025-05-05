@@ -36,7 +36,7 @@ const LandingPage = () => {
         arrows: false,
     };
 
-    const navLinks = ["Home", "About", "Custom Design", "Products", "Contact"];
+    const navLinks = ["Home", "About", "Reviews", "Products", "Contact"];
 
     return (
         <div className="bg-white text-gray-800">
@@ -81,7 +81,7 @@ const LandingPage = () => {
                                         <p className="mt-4 text-sm md:text-base text-gray-200 max-w-md">
                                             Explore timeless fashion or design your own look with our custom wears.
                                         </p>
-                                        <button className="mt-6 px-6 py-3 bg-emerald-500 text-white rounded hover:bg-emerald-600 transition">
+                                        <button className="mt-6 px-6 py-3 bg-emerald-500 cursor-pointer text-white rounded hover:bg-emerald-600 transition">
                                             Shop Now →
                                         </button>
                                     </div>
@@ -94,12 +94,12 @@ const LandingPage = () => {
             </section>
 
             {/* Products */}
-            <section className="px-8 py-16 mt-5 bg-gray-50">
+            <section id='products' className="px-8 py-16 mt-5 bg-gray-50">
                 <h3 className="text-2xl font-sans font-bold text-center">Our Top Products</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-6 max-w-10xl mx-auto">
                     {[{ img: product1, name: 'Shirt', price: '$49.99' }, { img: product2, name: 'Hoodie', price: '$59.99' }, { img: product3, name: 'Blazer', price: '$69.99' }, { img: product4, name: 'Jeans', price: '$79.99' }]
                         .map((item, idx) => (
-                            <div key={idx} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out">
+                            <div key={idx} className="bg-white cursor-pointer rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out">
                                 <img src={item.img} alt={item.name} className="w-full h-75 object-cover" />
                                 <div className="p-4">
                                     <h2 className="text-lg font-semibold text-gray-800">{item.name}</h2>
@@ -118,7 +118,7 @@ const LandingPage = () => {
                     { name: "Sneha K.", stars: 4, message: "Custom design process was smooth. Delivery was fast too." },
                     { name: "Rohit P.", stars: 5, message: "StyleHaus nailed my vision! Got so many compliments." }]
                         .map((review, i) => (
-                            <div key={i} className="bg-white p-6 rounded shadow-md border border-gray-200">
+                            <div key={i} className="bg-white p-6 hover:scale-105 cursor-pointer transition-transform duration-300 ease-in-out rounded shadow-md border border-gray-200">
                                 <div className="flex items-center mb-3">
                                     <div className="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-semibold mr-3">{review.name[0]}</div>
                                     <div>
@@ -133,7 +133,7 @@ const LandingPage = () => {
             </section>
 
             {/* Custom Design */}
-            <section id="custom" className="bg-[#e8f3f9] px-8 py-5">
+            <section className="bg-[#e8f3f9] px-8 py-5">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
                     <div className="md:w-1/2 mb-10 md:mb-0">
                         <h3 className="text-4xl font-bold text-emerald-600 mb-4">Design Your Own Outfit</h3>
@@ -146,7 +146,7 @@ const LandingPage = () => {
                             <li>🧵 Our tailors craft it to perfection</li>
                             <li>📦 Delivered to your doorstep</li>
                         </ul>
-                        <button className="px-6 py-3 bg-emerald-500 text-white rounded-full font-semibold hover:bg-emerald-600 transition">
+                        <button className="px-6 py-3 cursor-pointer bg-emerald-500 text-white rounded-full font-semibold hover:bg-emerald-600 transition">
                             Start Designing
                         </button>
                     </div>
@@ -174,7 +174,7 @@ const LandingPage = () => {
                     <input type="tel" name='mobileno' placeholder="Mobile no." className="w-full border border-gray-300 px-4 py-2 rounded" />
                     <input type="email" name='email' placeholder="Email" className="w-full border border-gray-300 px-4 py-2 rounded" />
                     <textarea name='message' rows="4" placeholder="Message" className="w-full border border-gray-300 px-4 py-2 rounded" />
-                    <button type="submit" className="px-6 py-2 bg-emerald-500 text-white rounded hover:bg-emerald-600">Send Message</button>
+                    <button type="submit" className="px-6 py-2 cursor-pointer bg-emerald-500 text-white rounded hover:bg-emerald-600">Send Message</button>
                 </form>
             </section>
 
