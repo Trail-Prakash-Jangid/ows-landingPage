@@ -20,7 +20,7 @@ const LandingPage = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_x3c85gg', 'template_cj7ux7x', form.current, '53txsFgzX0GJJzdAm')
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
             .then(() => alert('Message sent!'))
             .catch(() => alert('Error sending message.'));
     };
